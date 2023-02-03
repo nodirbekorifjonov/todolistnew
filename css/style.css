@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(23deg, #0c1f15, #1b383c);
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  height: 500px;
+  padding: 20px 30px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: rgb(24, 24, 24);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.input-text {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-bottom: 3px solid #d35400;
+  font-size: 18px;
+  background-color: transparent;
+  color: #fff;
+  transition: 0.3s ease;
+  /* border-radius: 5px; */
+}
+
+.input-text:focus {
+  outline: none;
+  border-color: #d35400;
+}
+
+.button {
+  cursor: pointer;
+  color: #ecf0f1;
+  font-size: 17px;
+  background-color: #ff7b00;
+  border: 1px solid #f39c12;
+  border-radius: 5px;
+  padding: 10px 32px;
+  box-shadow: 0px 6px 0px #d35400;
+  transition: all 0.1s;
+  font-weight: 600;
+}
+
+.button:active {
+  box-shadow: 0px 2px 0px #d35400;
+  position: relative;
+  top: 2px;
+}
+
+.wrapper {
+  max-height: 350px;
+  padding-right: 5px;
+  overflow-y: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  width: 4px;
+  background-color: rgba(255, 255, 255, 0.685);
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  padding: 10px 5px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background-color: rgba(255, 228, 196, 0.11);
+  border-radius: 5px;
+}
+
+.done {
+  padding: 7px 12px;
+  background-color: #008000;
+  border: 1px solid #009200;
+  box-shadow: 0px 6px 0px #005f00;
+  font-size: 15px;
+  cursor: pointer;
+  color: #ecf0f1;
+  border-radius: 5px;
+  transition: all 0.1s;
+  font-weight: 600;
+}
+
+.done:active {
+  box-shadow: 0px 2px 0px #005f00;
+  position: relative;
+  top: 2px;
+}
+
+.delete {
+  padding: 7px 12px;
+  background-color: #ff0000;
+  border: 1px solid rgb(255, 13, 13);
+  box-shadow: 0px 6px 0px #cc0000;
+  font-size: 15px;
+  cursor: pointer;
+  color: #ecf0f1;
+  border-radius: 5px;
+  transition: all 0.1s;
+  font-weight: 600;
+}
+
+.delete:active {
+  box-shadow: 0px 2px 0px #cc0000;
+  position: relative;
+  top: 2px;
+}
+
+.active p {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.active .done {
+  opacity: 0.4;
+}
+
+.active {
+  background-color: rgba(255, 228, 196, 0.027);
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.copy {
+  color: rgba(197, 197, 197, 0.582);
+  position: absolute;
+  bottom: 20px;
+}
+
+@media screen and (max-width: 585px) {
+  .container {
+    margin: 0 15px;
+  }
+
+  .button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
